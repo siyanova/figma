@@ -14,27 +14,74 @@
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
+                <RowDefinition Height="30"/>
                 <RowDefinition Height="5*"/>
             </Grid.RowDefinitions>
-            <StackPanel Orientation="Horizontal" Grid.Row="0">
-                <Image Source="avatar\woman.png"/>
-                <TextBlock Text="Nickname" VerticalAlignment="Center" Margin="10" FontSize="15"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Background="#FFFCFF7F">
+                <Image Source="image\avatar\man.png" Margin="5"/>
+                <TextBlock Text="Nickname" VerticalAlignment="Center" Name ="myNickname"  Margin="10" FontSize="15"/>
             </StackPanel>
-            <ScrollViewer Grid.Row="1">
-                <ListBox >
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#FFFCFF7F">
+                <TextBox HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="25" Width="235" Text="поиск"  FontSize ="12" Background="White" >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <Button Background="#FFFCFF7F" Height="25" Width="25">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                    <Image Source="image\icon\loupe.png" Width="20" Height="20" Margin="2"/>
+                </Button>
+                
+            </StackPanel>
+
+            <ScrollViewer Grid.Row="2" >
+                <ListBox Background="#FFFEFFB7">
                     <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="avatar\woman.png" />
-                        <TextBlock/>
+                        <Border Margin="5" Grid.Column="1" Padding="5" BorderThickness="1" Width="220" Height="40" Background="White" CornerRadius="12">
+                            <TextBlock Text="NameFriend" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" />
+                        </Border>
+                        <Image Source="image\avatar\woman.png" Width="40" Height="40" HorizontalAlignment="Left"/>
                     </Grid>
-                  
-               
                 </ListBox>
             </ScrollViewer>
 
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition  />
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#FFFEFFB7">
+                <Image Source="image\avatar\woman.png" Margin="5"/>
+                <Border Margin="5" Grid.Column="1" Padding="5" BorderThickness="1" Width="220" Height="40" Background="White" CornerRadius="12">
+                    <TextBlock Text="NameFriend" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" />
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <TextBox HorizontalAlignment="Left" Margin="9"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="40" Width="460" Text="Введите текст"  FontSize ="14" Background="White" >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <Button Background="#FFFCFF7F" Height="45" Width="45" FontSize="30">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                    <Image Source="image\icon\strelka1.png" Margin="7"/>
+                </Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>
