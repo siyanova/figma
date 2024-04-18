@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,25 @@ namespace figma
     /// </summary>
     public partial class profile : Window
     {
-        public profile()
+        private SqlConnection conn;
+        private string id;
+        public profile(SqlConnection conn, string id)
         {
             InitializeComponent();
+            this.conn = conn;
+            this.id = id;
+            WriteData();
+        }
+        private void WriteData()
+        {
+            SqlCommand cmd = new SqlCommand("select FirstNameUser, "+" LastNameUser, "+" NumberPhone, "+" Statuss, "+" ImageProfile from Users where id =" + id, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            FirstName.Text = reader[0].ToString();
+            LastName.Text = reader[1].ToString();
+            NumberPhone.Text = reader[2].ToString();
+            Status.Text = reader[3].ToString();
+
         }
     }
 }

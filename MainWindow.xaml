@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0"  >
             <Label Content="Логин" FontSize="30" Margin="150,200,0,0" />
-            <TextBox HorizontalAlignment="Left" Height="79" Width="462"  FontSize ="30" Background="#FFD9D9D9" Margin="150,0,0,0">
+            <TextBox Padding="5"  HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="79" Width="462" Name="loginBox" FontSize ="30" Background="#FFD9D9D9" Margin="150,0,0,0">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="30"/>
@@ -28,14 +28,15 @@
             </TextBox>
             <Label Content="Пароль" FontSize ="30" Margin="150,0,0,0"/>
 
-            <TextBox HorizontalAlignment="Left" Height="79" Width="462" FontSize ="30" Background="#FFD9D9D9" Margin="150,0,0,0">
+            <TextBox HorizontalAlignment="Left" Padding="5" VerticalContentAlignment="Center" Name="passwordBox" Height="79" Width="462" FontSize ="30" Background="#FFD9D9D9" Margin="150,0,0,0">
+                
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="30"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <Button Width="287" Height="69" Margin="150,30,0,0" Background="#D9D9D9" Content="Войти" FontSize="30">
+            <Button Width="287" Height="69" Name ="inputButton"  Margin="150,30,0,0" Background="#D9D9D9" Content="Войти" FontSize="30" Click="inputButton_Click" Opacity="0.99">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="30"/>

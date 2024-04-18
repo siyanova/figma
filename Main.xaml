@@ -18,19 +18,26 @@
                 <RowDefinition Height="5*"/>
             </Grid.RowDefinitions>
 
-            <StackPanel Orientation="Horizontal" Grid.Row="0" Background="#FFFCFF7F">
-                <Image Source="image\avatar\man.png" Margin="5"/>
-                <TextBlock Text="Nickname" VerticalAlignment="Center" Name ="myNickname"  Margin="10" FontSize="15"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Background="#D9D9D9">
+                <Button BorderThickness="0" Name ="profileWin" Click="profileWin_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                    <Image Source="image\avatar\man.png" Margin="5"/>
+                </Button>
+                <TextBlock Text="Nickname"  VerticalAlignment="Center" Name ="myNickname"  Margin="10" FontSize="15"/>
             </StackPanel>
-            <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#FFFCFF7F">
-                <TextBox HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="25" Width="235" Text="поиск"  FontSize ="12" Background="White" >
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#D9D9D9">
+                <TextBox HorizontalAlignment="Left" Padding="2" VerticalContentAlignment="Center" Height="25" Width="235" Text="поиск"  FontSize ="12" Background="White" >
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <Button Background="#FFFCFF7F" Height="25" Width="25">
+                <Button Background="#D9D9D9" BorderThickness="0" Height="25" Width="25">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="30"/>
@@ -66,14 +73,14 @@
                 </Border>
             </StackPanel>
             <StackPanel Grid.Row="2" Orientation="Horizontal">
-                <TextBox HorizontalAlignment="Left" Margin="9"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="40" Width="460" Text="Введите текст"  FontSize ="14" Background="White" >
+                <TextBox HorizontalAlignment="Left" Margin="9" Padding="5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="40" Width="460" Text="Введите текст"  FontSize ="14" Background="White" >
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="20"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <Button Background="#FFFCFF7F" Height="45" Width="45" FontSize="30">
+                <Button Background="#D9D9D9" BorderThickness="0" Height="45" Width="45" FontSize="30" >
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="30"/>
